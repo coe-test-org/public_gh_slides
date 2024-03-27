@@ -1,0 +1,8 @@
+format:
+  revealjs:
+    # highlight-style: custom.theme
+    controls: true
+    transition: slide
+    theme: [default, styles.scss]
+    navigation-mode: vertical
+    chalkboard: true

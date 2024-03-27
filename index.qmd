@@ -1,13 +1,4 @@
 ---
-format:
-  revealjs:
-    # highlight-style: custom.theme
-    width: 1300
-    controls: true
-    transition: slide
-    theme: [default, styles.scss]
-    navigation-mode: vertical
-    chalkboard: true
 revealjs-plugins:
   - codewindow
 knitr: true
@@ -24,7 +15,7 @@ frank aragona
 ```{mermaid}
 %%| eval: true
 %%| echo: false
-%%| fig-height: 7
+%%| fig-height: 4
 %%{init: { 'logLevel': 'debug', 'theme': 'base' } }%%
 timeline
       2021 : July - Begin using Github for sequencing pipelines
@@ -42,8 +33,11 @@ timeline
 ```{=html}
 <iframe width="1200" height="600" src="https://nw-page.github.io/standards/" title="Manuscript" class="myframe2"></iframe>
 ```
-
 # Data Democratization
+
+![](images/codespace.gif){.myframe2 width="500"}
+
+# idk
 
 ::: columns
 ::: {.column width="60%"}
