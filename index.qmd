@@ -1,0 +1,133 @@
+---
+format:
+  revealjs:
+    # highlight-style: custom.theme
+    width: 1300
+    controls: true
+    transition: slide
+    theme: [default, styles.scss]
+    navigation-mode: vertical
+    chalkboard: true
+revealjs-plugins:
+  - codewindow
+knitr: true
+echo: true
+eval: false
+embed-resources: false
+---
+
+# NW-PaGe public github org![Windows 10 Anniversary Update](https://em-content.zobj.net/source/microsoft/74/water-wave_1f30a.png){alt="Windows 10 Anniversary Update" style="transform: translate(0px, 20px);" width="80"} {data-background-color="#051525"}
+
+frank aragona
+
+# Public Github Timeline
+
+```{mermaid}
+%%{init: { 'logLevel': 'debug', 'theme': 'base' } }%%
+    timeline
+        title History of Social Media Platform
+          2021 : July - Begin using Github for sequencing pipelines
+          2022 : June - Receive batch of Github licenses at DOH
+               : July - >150 DOH users set up Github accounts
+               : Sep. - Use Github to set up codebase for new outbreaks (MPV)
+               : Dec. - Begin discussions on public Github use
+          2023 : Feb. - IT support and security guidelines
+          2024 : Feb. - Create standards and guidelines for the org
+               : March - Publish first public github repo
+```
+
+# Org Guidelines
+
+```{=html}
+<iframe width="900" height="700" src="https://nw-page.github.io/standards/" title="Manuscript" class="myframe2"></iframe>
+```
+
+# Data Democratization
+
+::: columns
+::: {.column width="60%"}
+```{=html}
+<iframe width="700" height="600" src="https://notebooks-now.github.io/submission-quarto-full/" title="Manuscript" class="myframe2"></iframe>
+```
+:::
+
+::: {.column width="40%"}
+::: {.fragment .fade-out}
+::: {.codewindow .quarto}
+\_quarto.yml
+
+```{yaml}
+#| code-line-numbers: "7-17"
+project:
+  type: manuscript
+
+manuscript:
+  article: index.qmd
+
+format:
+  html:
+    format-links: [pdf, docx]
+  docx: default
+  jats: default
+  pdf: 
+    output-file: "idk"
+  agu-pdf:
+    output-file: "agu"
+  jasa-pdf:
+    output-file: "jasa"
+```
+:::
+:::
+
+::: {.fragment .fade-in}
+::: {.codewindow .quarto}
+index.yml
+
+```` md
+---
+title: "La Palma Earthquakes"
+author: <author name>
+abstract: <text here>
+date: today
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished presentation.
+
+## Bullets
+
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown
+-   Output from executable code
+
+## Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{{r}}
+1 + 1
+```
+````
+:::
+:::
+:::
+:::
+
+# Parameterized Reports
+
+![Source: [Parameterized Reporting with Quarto](https://jadeyryan.quarto.pub/rladies-abuja-quarto-params/materials.html){.blue} by Jadey Ryan](images/params.png)
+
+# 
+
+# idk
+
+```{r }
+#| classes: container
+# Load Libraries
+library(dplyr)
+
+df <- airquality |>
+  filter(hi == 5 & no == "string")
+```
