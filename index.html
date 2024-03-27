@@ -403,22 +403,21 @@
 
 <section id="public-github-timeline" class="title-slide slide level1 center">
 <h1>Public Github Timeline</h1>
-<div class="cell" data-reveal="true">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1"></a>%%{init: { 'logLevel': 'debug', 'theme': 'base' } }%%</span>
-<span id="cb1-2"><a href="#cb1-2"></a>    timeline</span>
-<span id="cb1-3"><a href="#cb1-3"></a>        title History of Social Media Platform</span>
-<span id="cb1-4"><a href="#cb1-4"></a>          2021 : July - Begin using Github for sequencing pipelines</span>
-<span id="cb1-5"><a href="#cb1-5"></a>          2022 : June - Receive batch of Github licenses at DOH</span>
-<span id="cb1-6"><a href="#cb1-6"></a>               : July - &gt;150 DOH users set up Github accounts</span>
-<span id="cb1-7"><a href="#cb1-7"></a>               : Sep. - Use Github to set up codebase for new outbreaks (MPV)</span>
-<span id="cb1-8"><a href="#cb1-8"></a>               : Dec. - Begin discussions on public Github use</span>
-<span id="cb1-9"><a href="#cb1-9"></a>          2023 : Feb. - IT support and security guidelines</span>
-<span id="cb1-10"><a href="#cb1-10"></a>          2024 : Feb. - Create standards and guidelines for the org</span>
-<span id="cb1-11"><a href="#cb1-11"></a>               : March - Publish first public github repo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-reveal="true" data-eval="true" data-fig-height="7">
 <div class="cell-output-display">
 <div>
 <div>
-
+<pre class="mermaid mermaid-js">%%{init: { 'logLevel': 'debug', 'theme': 'base' } }%%
+timeline
+      2021 : July - Begin using Github for sequencing pipelines
+      2022 : June - Receive batch of Github licenses at DOH
+           : July - &gt;150 DOH users set up Github accounts
+           : Sep. - Use Github to set up codebase for new outbreaks (MPV)
+           : Dec. - Begin discussions on public Github use
+      2023 : Feb. - IT support and security guidelines
+      2024 : Feb. - Create standards and guidelines for the org
+           : March - Publish first public github repo
+</pre>
 </div>
 </div>
 </div>
@@ -427,7 +426,7 @@
 
 <section id="org-guidelines" class="title-slide slide level1 center">
 <h1>Org Guidelines</h1>
-<iframe width="900" height="700" src="https://nw-page.github.io/standards/" title="Manuscript" class="myframe2"></iframe>
+<iframe width="1200" height="600" src="https://nw-page.github.io/standards/" title="Manuscript" class="myframe2"></iframe>
 </section>
 
 <section id="data-democratization" class="title-slide slide level1 center">
@@ -439,55 +438,36 @@
 <div class="fragment fade-out">
 <div class="codewindow quarto">
 <p>_quarto.yml</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="7-17"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">project</span><span class="kw">:</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> manuscript</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="fu">manuscript</span><span class="kw">:</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="at">  </span><span class="fu">article</span><span class="kw">:</span><span class="at"> index.qmd</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a><span class="at">    </span><span class="fu">format-links</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">pdf</span><span class="kw">,</span><span class="at"> docx</span><span class="kw">]</span></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="at">  </span><span class="fu">docx</span><span class="kw">:</span><span class="at"> default</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a><span class="at">  </span><span class="fu">jats</span><span class="kw">:</span><span class="at"> default</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="at">  </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb2-13"><a href="#cb2-13"></a><span class="at">    </span><span class="fu">output-file</span><span class="kw">:</span><span class="at"> </span><span class="st">"idk"</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a><span class="at">  </span><span class="fu">agu-pdf</span><span class="kw">:</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a><span class="at">    </span><span class="fu">output-file</span><span class="kw">:</span><span class="at"> </span><span class="st">"agu"</span></span>
-<span id="cb2-16"><a href="#cb2-16"></a><span class="at">  </span><span class="fu">jasa-pdf</span><span class="kw">:</span></span>
-<span id="cb2-17"><a href="#cb2-17"></a><span class="at">    </span><span class="fu">output-file</span><span class="kw">:</span><span class="at"> </span><span class="st">"jasa"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </div>
 </div>
 <div class="fragment fade-in">
 <div class="codewindow quarto">
 <p>index.yml</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a><span class="co">---</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="an">title:</span><span class="co"> "La Palma Earthquakes"</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="an">author:</span><span class="co"> &lt;author name&gt;</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="an">abstract:</span><span class="co"> &lt;text here&gt;</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="an">date:</span><span class="co"> today</span></span>
-<span id="cb3-6"><a href="#cb3-6"></a><span class="co">---</span></span>
-<span id="cb3-7"><a href="#cb3-7"></a></span>
-<span id="cb3-8"><a href="#cb3-8"></a><span class="fu">## Quarto</span></span>
-<span id="cb3-9"><a href="#cb3-9"></a></span>
-<span id="cb3-10"><a href="#cb3-10"></a>Quarto enables you to weave together content and executable code into a finished presentation.</span>
-<span id="cb3-11"><a href="#cb3-11"></a></span>
-<span id="cb3-12"><a href="#cb3-12"></a><span class="fu">## Bullets</span></span>
-<span id="cb3-13"><a href="#cb3-13"></a></span>
-<span id="cb3-14"><a href="#cb3-14"></a>When you click the **Render** button a document will be generated that includes:</span>
-<span id="cb3-15"><a href="#cb3-15"></a></span>
-<span id="cb3-16"><a href="#cb3-16"></a><span class="ss">-   </span>Content authored with markdown</span>
-<span id="cb3-17"><a href="#cb3-17"></a><span class="ss">-   </span>Output from executable code</span>
-<span id="cb3-18"><a href="#cb3-18"></a></span>
-<span id="cb3-19"><a href="#cb3-19"></a><span class="fu">## Code</span></span>
-<span id="cb3-20"><a href="#cb3-20"></a></span>
-<span id="cb3-21"><a href="#cb3-21"></a>When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</span>
-<span id="cb3-22"><a href="#cb3-22"></a></span>
-<span id="cb3-23"><a href="#cb3-23"></a><span class="in">```{r}</span></span>
-<span id="cb3-24"><a href="#cb3-24"></a><span class="in">1 + 1</span></span>
-<span id="cb3-25"><a href="#cb3-25"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "La Palma Earthquakes"</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="an">author:</span><span class="co"> &lt;author name&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="an">abstract:</span><span class="co"> &lt;text here&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="an">date:</span><span class="co"> today</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="co">---</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="fu">## Quarto</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a></span>
+<span id="cb1-10"><a href="#cb1-10"></a>Quarto enables you to weave together content and executable code into a finished presentation.</span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="fu">## Bullets</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a></span>
+<span id="cb1-14"><a href="#cb1-14"></a>When you click the **Render** button a document will be generated that includes:</span>
+<span id="cb1-15"><a href="#cb1-15"></a></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="ss">-   </span>Content authored with markdown</span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="ss">-   </span>Output from executable code</span>
+<span id="cb1-18"><a href="#cb1-18"></a></span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="fu">## Code</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a></span>
+<span id="cb1-21"><a href="#cb1-21"></a>When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</span>
+<span id="cb1-22"><a href="#cb1-22"></a></span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="in">```{r}</span></span>
+<span id="cb1-24"><a href="#cb1-24"></a><span class="in">1 + 1</span></span>
+<span id="cb1-25"><a href="#cb1-25"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -507,11 +487,7 @@
 <section id="idk" class="title-slide slide level1 center">
 <h1>idk</h1>
 <div class="cell container">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Load Libraries</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb4-3"><a href="#cb4-3"></a></span>
-<span id="cb4-4"><a href="#cb4-4"></a>df <span class="ot">&lt;-</span> airquality <span class="sc">|&gt;</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a>  <span class="fu">filter</span>(hi <span class="sc">==</span> <span class="dv">5</span> <span class="sc">&amp;</span> no <span class="sc">==</span> <span class="st">"string"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
 </div>
 <div class="footer footer-default">
 

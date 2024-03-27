@@ -11,7 +11,6 @@ format:
 revealjs-plugins:
   - codewindow
 knitr: true
-echo: true
 eval: false
 embed-resources: false
 ---
@@ -23,23 +22,25 @@ frank aragona
 # Public Github Timeline
 
 ```{mermaid}
+%%| eval: true
+%%| echo: false
+%%| fig-height: 7
 %%{init: { 'logLevel': 'debug', 'theme': 'base' } }%%
-    timeline
-        title History of Social Media Platform
-          2021 : July - Begin using Github for sequencing pipelines
-          2022 : June - Receive batch of Github licenses at DOH
-               : July - >150 DOH users set up Github accounts
-               : Sep. - Use Github to set up codebase for new outbreaks (MPV)
-               : Dec. - Begin discussions on public Github use
-          2023 : Feb. - IT support and security guidelines
-          2024 : Feb. - Create standards and guidelines for the org
-               : March - Publish first public github repo
+timeline
+      2021 : July - Begin using Github for sequencing pipelines
+      2022 : June - Receive batch of Github licenses at DOH
+           : July - >150 DOH users set up Github accounts
+           : Sep. - Use Github to set up codebase for new outbreaks (MPV)
+           : Dec. - Begin discussions on public Github use
+      2023 : Feb. - IT support and security guidelines
+      2024 : Feb. - Create standards and guidelines for the org
+           : March - Publish first public github repo
 ```
 
 # Org Guidelines
 
 ```{=html}
-<iframe width="900" height="700" src="https://nw-page.github.io/standards/" title="Manuscript" class="myframe2"></iframe>
+<iframe width="1200" height="600" src="https://nw-page.github.io/standards/" title="Manuscript" class="myframe2"></iframe>
 ```
 
 # Data Democratization
