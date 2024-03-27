@@ -15,7 +15,7 @@ frank aragona
 ```{mermaid}
 %%| eval: true
 %%| echo: false
-%%| fig-height: 4
+%%| fig-height: 7
 %%{init: { 'logLevel': 'debug', 'theme': 'base' } }%%
 timeline
       2021 : July - Begin using Github for sequencing pipelines
@@ -35,7 +35,7 @@ timeline
 ```
 # Data Democratization
 
-![](images/codespace.gif){.myframe2 width="500"}
+![](images/codespace.gif){.myframe2 width="50%"}
 
 # idk
 
