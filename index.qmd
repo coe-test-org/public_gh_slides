@@ -10,14 +10,14 @@ embed-resources: false
 
 frank aragona
 
-# Public Github Timeline
+# {style="margin: -40px;"}
 
 ```{mermaid}
 %%| eval: true
 %%| echo: false
-%%| fig-height: 7
 %%{init: { 'logLevel': 'debug', 'theme': 'base' } }%%
 timeline
+      title WA DOH Github Timeline 
       2021 : July - Begin using Github for sequencing pipelines
       2022 : June - Receive batch of Github licenses at DOH
            : July - >150 DOH users set up Github accounts
@@ -28,86 +28,101 @@ timeline
            : March - Publish first public github repo
 ```
 
+
 # Org Guidelines
 
 ```{=html}
 <iframe width="1200" height="600" src="https://nw-page.github.io/standards/" title="Manuscript" class="myframe2"></iframe>
 ```
+
 # Data Democratization
 
-![](images/codespace.gif){.myframe2 width="50%"}
 
-# idk
+# 
 
-::: columns
+![](images/codespace.gif){.myframe2 width="500"}
+
+# 
+
+:::: columns
 ::: {.column width="60%"}
-```{=html}
-<iframe width="700" height="600" src="https://notebooks-now.github.io/submission-quarto-full/" title="Manuscript" class="myframe2"></iframe>
-```
+hi
 :::
 
 ::: {.column width="40%"}
-::: {.fragment .fade-out}
-::: {.codewindow .quarto}
-\_quarto.yml
+::: {.codewindow .js}
+devcontainer.json
 
-```{yaml}
-#| code-line-numbers: "7-17"
-project:
-  type: manuscript
+```{r eval=FALSE}
+{
+    // Create R container
+    "image": "ghcr.io/rocker-org/devcontainer/r-ver:4",
+    // Add renv features
+    "features": {
+      "ghcr.io/rocker-org/devcontainer-features/renv-cache:0": {},
+      "ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
+          "packages": "github::rstudio/renv"
+      },
+      // Install Quarto 
+      "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {},
+      // Install Rstudio
+      "ghcr.io/rocker-org/devcontainer-features/rstudio-server:0": {}
+    },
+    
+      // Use 'postCreateCommand' to run commands after the container is created.
+      // Install all packages from renv.lock in the repo
+      "postCreateCommand": "R -q -e 'renv::restore()'",
 
-manuscript:
-  article: index.qmd
-
-format:
-  html:
-    format-links: [pdf, docx]
-  docx: default
-  jats: default
-  pdf: 
-    output-file: "idk"
-  agu-pdf:
-    output-file: "agu"
-  jasa-pdf:
-    output-file: "jasa"
+      // "postCreateCommand": "R --version"
+      // Launch Rstucio IDE
+      "postAttachCommand": {
+              "rstudio-start": "rserver"
+          },
+          "forwardPorts": [
+              8787
+          ],
+          "portsAttributes": {
+              "8787": {
+                  "label": "RStudio IDE"
+              }
+          }
+  }
 ```
+
 :::
 :::
+::::
 
-::: {.fragment .fade-in}
-::: {.codewindow .quarto}
-index.yml
+# hi
 
-```` md
----
-title: "La Palma Earthquakes"
-author: <author name>
-abstract: <text here>
-date: today
----
+::: {.codewindow .r width="500px"}
+external_script.R
 
-## Quarto
+```{r eval=FALSE}
+#| code-line-numbers: "8-12"
+# ----- Read in Libraries ----- #
+## ---- libraries
+library(dplyr)
+library(magrittr)
+## ---- stop
 
-Quarto enables you to weave together content and executable code into a finished presentation.
+# ----- Read in the File ----- #
+## ---- read-chunk
+(df <- airquality %>%
+  arrange(desc(Month)) %>%
+  as_tibble())
+## ---- stop
 
-## Bullets
-
-When you click the **Render** button a document will be generated that includes:
-
--   Content authored with markdown
--   Output from executable code
-
-## Code
-
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-```{{r}}
-1 + 1
+# ----- Make a Plot ----- #
+## ---- make-plot
+(
+  plot <- df |>
+    ggplot() + 
+    geom_point(aes(Ozone,Temp)) +
+    facet_grid(~Month)
+)
+## ---- stop
 ```
-````
-:::
-:::
-:::
 :::
 
 # Parameterized Reports

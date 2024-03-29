@@ -6,3 +6,4 @@ format:
     theme: [default, styles.scss]
     navigation-mode: vertical
     chalkboard: true
+    width: 1300
