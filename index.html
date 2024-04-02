@@ -8,7 +8,7 @@
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.346">
+  <meta name="generator" content="quarto-1.5.22">
 
   <title>index</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -30,7 +30,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -69,7 +69,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -83,7 +83,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -401,14 +401,16 @@
 <p>frank aragona</p>
 </section>
 
-<section id="public-github-timeline" class="title-slide slide level1 center">
-<h1>Public Github Timeline</h1>
-<div class="cell" data-reveal="true" data-eval="true" data-fig-height="7">
+<section id="section" class="title-slide slide level1 center" style="margin: -40px;">
+<h1></h1>
+<div class="cell" data-reveal="true" data-eval="true" data-layout-align="default">
 <div class="cell-output-display">
 <div>
+<p></p><figure class=""><p></p>
 <div>
 <pre class="mermaid mermaid-js">%%{init: { 'logLevel': 'debug', 'theme': 'base' } }%%
 timeline
+      title WA DOH Github Timeline 
       2021 : July - Begin using Github for sequencing pipelines
       2022 : June - Receive batch of Github licenses at DOH
            : July - &gt;150 DOH users set up Github accounts
@@ -419,6 +421,7 @@ timeline
            : March - Publish first public github repo
 </pre>
 </div>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
@@ -429,73 +432,241 @@ timeline
 <iframe width="1200" height="600" src="https://nw-page.github.io/standards/" title="Manuscript" class="myframe2"></iframe>
 </section>
 
+<section id="templates" class="title-slide slide level1 center">
+<h1>Templates</h1>
+<iframe width="1200" height="600" src="<https://robjhyndman.com/hyndsight/quarto_templates.html>" title="Manuscript" class="myframe2"></iframe>
+</section>
+
 <section id="data-democratization" class="title-slide slide level1 center">
 <h1>Data Democratization</h1>
+<div>
+<ul>
+<li class="fragment">Accessible</li>
+<li class="fragment">Reproducible</li>
+<li class="fragment">Easy to install</li>
+<li class="fragment">No hardware requirements</li>
+</ul>
+</div>
+</section>
 
-<img data-src="images/codespace.gif" class="myframe2 r-stretch" style="width:50.0%"></section>
+<section id="github-codespace" class="title-slide slide level1 center">
+<h1>Github Codespace</h1>
 
-<section id="idk" class="title-slide slide level1 center">
-<h1>idk</h1>
+<img data-src="images/codespace-2.gif" class="myframe r-stretch"></section>
+
+<section id="github-codespace-1" class="title-slide slide level1 center">
+<h1>Github Codespace</h1>
 <div class="columns">
-<div class="column" style="width:60%;">
-<iframe width="700" height="600" src="https://notebooks-now.github.io/submission-quarto-full/" title="Manuscript" class="myframe2"></iframe>
-</div><div class="column" style="width:40%;">
-<div class="fragment fade-out">
-<div class="codewindow quarto">
+<div class="column" style="width:50%;">
+<div class="codewindow js">
+<p>devcontainer.json</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource javascript number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href=""></a>{</span>
+<span id="cb1-2"><a href=""></a>  <span class="co">// Create R container</span></span>
+<span id="cb1-3"><a href=""></a>  <span class="st">"image"</span><span class="op">:</span> <span class="st">"ghcr.io/rocker-org/devcontainer/r-ver:4"</span><span class="op">,</span></span>
+<span id="cb1-4"><a href=""></a></span>
+<span id="cb1-5"><a href=""></a>  <span class="co">// Add renv features</span></span>
+<span id="cb1-6"><a href=""></a>  <span class="st">"features"</span><span class="op">:</span> {</span>
+<span id="cb1-7"><a href=""></a>    <span class="st">"ghcr.io/rocker-org/devcontainer-features/renv-cache:0"</span><span class="op">:</span> {}<span class="op">,</span></span>
+<span id="cb1-8"><a href=""></a>    <span class="st">"ghcr.io/rocker-org/devcontainer-features/r-packages:1"</span><span class="op">:</span> {</span>
+<span id="cb1-9"><a href=""></a>        <span class="st">"packages"</span><span class="op">:</span> <span class="st">"github::rstudio/renv"</span></span>
+<span id="cb1-10"><a href=""></a>    }<span class="op">,</span></span>
+<span id="cb1-11"><a href=""></a></span>
+<span id="cb1-12"><a href=""></a>    <span class="co">// Install Quarto </span></span>
+<span id="cb1-13"><a href=""></a>    <span class="st">"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1"</span><span class="op">:</span> {}<span class="op">,</span></span>
+<span id="cb1-14"><a href=""></a>    </span>
+<span id="cb1-15"><a href=""></a>    <span class="co">// Install Rstudio</span></span>
+<span id="cb1-16"><a href=""></a>    <span class="st">"ghcr.io/rocker-org/devcontainer-features/rstudio-server:0"</span><span class="op">:</span> {}</span>
+<span id="cb1-17"><a href=""></a>  }<span class="op">,</span></span>
+<span id="cb1-18"><a href=""></a>  </span>
+<span id="cb1-19"><a href=""></a>    <span class="co">// Use 'postCreateCommand' to run commands after the container is created.</span></span>
+<span id="cb1-20"><a href=""></a>    <span class="co">// Install all packages from renv.lock in the repo</span></span>
+<span id="cb1-21"><a href=""></a>    <span class="st">"postCreateCommand"</span><span class="op">:</span> <span class="st">"R -q -e 'renv::restore()'"</span><span class="op">,</span></span>
+<span id="cb1-22"><a href=""></a></span>
+<span id="cb1-23"><a href=""></a>    <span class="co">// "postCreateCommand": "R --version"</span></span>
+<span id="cb1-24"><a href=""></a>    <span class="co">// Launch Rstucio IDE</span></span>
+<span id="cb1-25"><a href=""></a>    <span class="st">"postAttachCommand"</span><span class="op">:</span> {</span>
+<span id="cb1-26"><a href=""></a>            <span class="st">"rstudio-start"</span><span class="op">:</span> <span class="st">"rserver"</span></span>
+<span id="cb1-27"><a href=""></a>        }<span class="op">,</span></span>
+<span id="cb1-28"><a href=""></a>        <span class="st">"forwardPorts"</span><span class="op">:</span> [</span>
+<span id="cb1-29"><a href=""></a>            <span class="dv">8787</span></span>
+<span id="cb1-30"><a href=""></a>        ]<span class="op">,</span></span>
+<span id="cb1-31"><a href=""></a>        <span class="st">"portsAttributes"</span><span class="op">:</span> {</span>
+<span id="cb1-32"><a href=""></a>            <span class="st">"8787"</span><span class="op">:</span> {</span>
+<span id="cb1-33"><a href=""></a>                <span class="st">"label"</span><span class="op">:</span> <span class="st">"RStudio IDE"</span></span>
+<span id="cb1-34"><a href=""></a>            }</span>
+<span id="cb1-35"><a href=""></a>        }</span>
+<span id="cb1-36"><a href=""></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div><div class="column myframe2" style="width:50%;">
+<p><img data-src="images/codespace2.png"></p>
+</div>
+</div>
+</section>
+
+<section id="github-codespace-2" class="title-slide slide level1 center">
+<h1>Github Codespace</h1>
+
+<img data-src="images/codespaceR-2.gif" class="r-stretch"></section>
+
+<section id="sequencing-1.0-pipeline" class="title-slide slide level1 center">
+<h1>Sequencing 1.0 Pipeline</h1>
+<iframe width="1200" height="600" src="<https://nw-page.github.io/sequencing_integration_pipeline1.0/>" title="Manuscript" class="myframe2"></iframe>
+</section>
+
+<section id="sequencing-1.0-pipeline-1" class="title-slide slide level1 center">
+<h1>Sequencing 1.0 Pipeline</h1>
+<div>
+<div class="columns">
+<div class="fragment codewindow quarto column" data-fragment-index="1" style="width:33%;">
 <p>_quarto.yml</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href=""></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href=""></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> manuscript</span></span>
+<span id="cb2-3"><a href=""></a></span>
+<span id="cb2-4"><a href=""></a><span class="fu">manuscript</span><span class="kw">:</span></span>
+<span id="cb2-5"><a href=""></a><span class="at">  </span><span class="fu">article</span><span class="kw">:</span><span class="at"> index.qmd</span></span>
+<span id="cb2-6"><a href=""></a><span class="at">  </span><span class="fu">code-links</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">repo</span><span class="kw">,</span><span class="at"> devcontainer</span><span class="kw">,</span><span class="at"> binder</span><span class="kw">]</span></span>
+<span id="cb2-7"><a href=""></a></span>
+<span id="cb2-8"><a href=""></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb2-9"><a href=""></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb2-10"><a href=""></a><span class="at">    </span><span class="fu">comments</span><span class="kw">:</span></span>
+<span id="cb2-11"><a href=""></a><span class="at">      </span><span class="fu">hypothesis</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb2-12"><a href=""></a><span class="co">    # repo-url: https://github.com/DOH-EPI-Coders/sequencing1.0_sanitized</span></span>
+<span id="cb2-13"><a href=""></a><span class="co">    # repo-actions: [edit, issue]   </span></span>
+<span id="cb2-14"><a href=""></a><span class="at">    </span><span class="fu">citations-hover</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb2-15"><a href=""></a><span class="at">    </span><span class="fu">crossrefs-hover</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb2-16"><a href=""></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb2-17"><a href=""></a><span class="at">    </span><span class="fu">toc-location</span><span class="kw">:</span><span class="at"> left</span></span>
+<span id="cb2-18"><a href=""></a><span class="at">    </span><span class="fu">title-block-style</span><span class="kw">:</span><span class="at"> manuscript</span></span>
+<span id="cb2-19"><a href=""></a><span class="at">    </span><span class="fu">format-links</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">pdf</span><span class="kw">,</span><span class="at"> docx</span><span class="kw">]</span></span>
+<span id="cb2-20"><a href=""></a><span class="at">    </span><span class="fu">notebook-links</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb2-21"><a href=""></a><span class="at">  </span><span class="fu">docx</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb2-22"><a href=""></a><span class="at">  </span><span class="fu">jats</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb2-23"><a href=""></a><span class="at">  </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb2-24"><a href=""></a><span class="at">    </span><span class="fu">output-file</span><span class="kw">:</span><span class="at"> </span><span class="st">"diqa-sequencing-pipeline"</span></span>
+<span id="cb2-25"><a href=""></a><span class="at">    </span><span class="fu">output-ext</span><span class="kw">:</span><span class="at">  </span><span class="st">"pdf"</span></span>
+<span id="cb2-26"><a href=""></a><span class="at">    </span><span class="fu">margin-width</span><span class="kw">:</span><span class="at"> 10px</span></span>
+<span id="cb2-27"><a href=""></a><span class="at">    </span><span class="fu">gutter-width</span><span class="kw">:</span><span class="at"> 1.5rem</span></span>
+<span id="cb2-28"><a href=""></a><span class="at">    </span><span class="fu">fig-pos</span><span class="kw">:</span><span class="at"> </span><span class="st">"H"</span><span class="co"> # this makes sure that the figures output where they're supposed to in pdf </span></span>
+<span id="cb2-29"><a href=""></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb2-30"><a href=""></a><span class="at">    </span><span class="fu">number-sections</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb2-31"><a href=""></a><span class="at">    </span><span class="fu">number-depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb2-32"><a href=""></a><span class="at">    </span><span class="fu">include-in-header</span><span class="kw">:</span></span>
+<span id="cb2-33"><a href=""></a><span class="at">       </span><span class="kw">-</span><span class="at"> </span><span class="st">"assets/styles.tex"</span></span>
+<span id="cb2-34"><a href=""></a><span class="co">  # pdf: </span></span>
+<span id="cb2-35"><a href=""></a><span class="co">  #   output-file: "idk"</span></span>
+<span id="cb2-36"><a href=""></a><span class="co">  # agu-pdf:</span></span>
+<span id="cb2-37"><a href=""></a><span class="co">  #   output-file: "agu"</span></span>
+<span id="cb2-38"><a href=""></a><span class="co">  # jasa-pdf:</span></span>
+<span id="cb2-39"><a href=""></a><span class="co">  #   output-file: "jasa"</span></span>
+<span id="cb2-40"><a href=""></a></span>
+<span id="cb2-41"><a href=""></a><span class="co">  # (other formats)</span></span>
+<span id="cb2-42"><a href=""></a><span class="co">  # pdf: default</span></span>
+<span id="cb2-43"><a href=""></a></span>
+<span id="cb2-44"><a href=""></a><span class="fu">execute</span><span class="kw">:</span></span>
+<span id="cb2-45"><a href=""></a><span class="at">  </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb2-46"><a href=""></a></span>
+<span id="cb2-47"><a href=""></a><span class="fu">citation</span><span class="kw">:</span></span>
+<span id="cb2-48"><a href=""></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> article-journal</span></span>
+<span id="cb2-49"><a href=""></a><span class="at">  </span><span class="fu">issued</span><span class="kw">:</span><span class="at"> 2024-03-01</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<div class="fragment fade-in">
-<div class="codewindow quarto">
-<p>index.yml</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "La Palma Earthquakes"</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="an">author:</span><span class="co"> &lt;author name&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="an">abstract:</span><span class="co"> &lt;text here&gt;</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="an">date:</span><span class="co"> today</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="co">---</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="fu">## Quarto</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a></span>
-<span id="cb1-10"><a href="#cb1-10"></a>Quarto enables you to weave together content and executable code into a finished presentation.</span>
-<span id="cb1-11"><a href="#cb1-11"></a></span>
-<span id="cb1-12"><a href="#cb1-12"></a><span class="fu">## Bullets</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a></span>
-<span id="cb1-14"><a href="#cb1-14"></a>When you click the **Render** button a document will be generated that includes:</span>
-<span id="cb1-15"><a href="#cb1-15"></a></span>
-<span id="cb1-16"><a href="#cb1-16"></a><span class="ss">-   </span>Content authored with markdown</span>
-<span id="cb1-17"><a href="#cb1-17"></a><span class="ss">-   </span>Output from executable code</span>
-<span id="cb1-18"><a href="#cb1-18"></a></span>
-<span id="cb1-19"><a href="#cb1-19"></a><span class="fu">## Code</span></span>
-<span id="cb1-20"><a href="#cb1-20"></a></span>
-<span id="cb1-21"><a href="#cb1-21"></a>When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</span>
-<span id="cb1-22"><a href="#cb1-22"></a></span>
-<span id="cb1-23"><a href="#cb1-23"></a><span class="in">```{r}</span></span>
-<span id="cb1-24"><a href="#cb1-24"></a><span class="in">1 + 1</span></span>
-<span id="cb1-25"><a href="#cb1-25"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+</div><div class="fragment codewindow quarto column" data-fragment-index="2" style="width:33%;">
+<p>index.qmd</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href=""></a><span class="co">---</span></span>
+<span id="cb3-2"><a href=""></a><span class="an">title:</span><span class="co"> Data Integration and Quality Assurance of Sequencing Metadata in Washington State</span></span>
+<span id="cb3-3"><a href=""></a><span class="co"># affiliations: </span></span>
+<span id="cb3-4"><a href=""></a><span class="co">#   - id: doh</span></span>
+<span id="cb3-5"><a href=""></a><span class="co">#     name: Washington State Department of Health</span></span>
+<span id="cb3-6"><a href=""></a><span class="co">#     city: Tacoma</span></span>
+<span id="cb3-7"><a href=""></a><span class="co">#     state: WA</span></span>
+<span id="cb3-8"><a href=""></a><span class="an">authors:</span></span>
+<span id="cb3-9"><a href=""></a><span class="an">date:</span><span class="co"> 3-4-2024</span></span>
+<span id="cb3-10"><a href=""></a><span class="an">date-modified:</span><span class="co"> today</span></span>
+<span id="cb3-11"><a href=""></a><span class="an">notebook-links:</span><span class="co"> true</span></span>
+<span id="cb3-12"><a href=""></a><span class="an">abstract:</span><span class="co"> |</span></span>
+<span id="cb3-13"><a href=""></a><span class="co">  &lt;abstract-here&gt;</span></span>
+<span id="cb3-14"><a href=""></a><span class="an">keywords:</span></span>
+<span id="cb3-15"><a href=""></a><span class="co">  - Sequencing</span></span>
+<span id="cb3-16"><a href=""></a><span class="co">  - COVID19</span></span>
+<span id="cb3-17"><a href=""></a><span class="an">bibliography:</span><span class="co"> cites.bib</span></span>
+<span id="cb3-18"><a href=""></a><span class="co">---</span></span>
+<span id="cb3-19"><a href=""></a></span>
+<span id="cb3-20"><a href=""></a><span class="fu"># Introduction</span></span>
+<span id="cb3-21"><a href=""></a> Text </span>
+<span id="cb3-22"><a href=""></a></span>
+<span id="cb3-23"><a href=""></a><span class="fu"># Figures</span></span>
+<span id="cb3-24"><a href=""></a></span>
+<span id="cb3-25"><a href=""></a>During the February 2021 to September 2023 period we processed a total of 172,050 sequences. These data were most commonly processed via SFT (secure file transfer) of tabular datasets (see @fig-countprop below)</span>
+<span id="cb3-26"><a href=""></a></span>
+<span id="cb3-27"><a href=""></a>{{&lt; embed notebooks/analysis.qmd#fig-countprop &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="fragment codewindow quarto column" data-fragment-index="3" style="width:33%;">
+<p>notebooks/analysis.qmd</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href=""></a><span class="co">---</span></span>
+<span id="cb4-2"><a href=""></a><span class="an">title:</span><span class="co"> "Pipeline Counts"</span></span>
+<span id="cb4-3"><a href=""></a><span class="an">description:</span><span class="co"> Get counts and make plots/tables of sequences in WDRS and elsewhere</span></span>
+<span id="cb4-4"><a href=""></a><span class="an">author:</span><span class="co"> Frank Aragona</span></span>
+<span id="cb4-5"><a href=""></a><span class="an">date:</span><span class="co"> 2-27-2024</span></span>
+<span id="cb4-6"><a href=""></a><span class="an">date-modified:</span><span class="co"> today</span></span>
+<span id="cb4-7"><a href=""></a><span class="an">notebook-links:</span><span class="co"> true</span></span>
+<span id="cb4-8"><a href=""></a><span class="an">html-table-processing:</span><span class="co"> none</span></span>
+<span id="cb4-9"><a href=""></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb4-10"><a href=""></a><span class="co">  html: default</span></span>
+<span id="cb4-11"><a href=""></a><span class="co">---</span></span>
+<span id="cb4-12"><a href=""></a></span>
+<span id="cb4-13"><a href=""></a><span class="fu"># Libraries</span></span>
+<span id="cb4-14"><a href=""></a></span>
+<span id="cb4-15"><a href=""></a>And read in custom functions</span>
+<span id="cb4-16"><a href=""></a><span class="in">```{r}</span></span>
+<span id="cb4-17"><a href=""></a><span class="in">options(box.path = getwd())</span></span>
+<span id="cb4-18"><a href=""></a><span class="in">getwd()</span></span>
+<span id="cb4-19"><a href=""></a><span class="in">box::use(</span></span>
+<span id="cb4-20"><a href=""></a><span class="in">  DBI[dbConnect,dbGetQuery],</span></span>
+<span id="cb4-21"><a href=""></a><span class="in">  odbc[odbc],</span></span>
+<span id="cb4-22"><a href=""></a><span class="in">  lubridate[...],</span></span>
+<span id="cb4-23"><a href=""></a><span class="in">  pins[...],</span></span>
+<span id="cb4-24"><a href=""></a><span class="in">  tibble[...]</span></span>
+<span id="cb4-25"><a href=""></a><span class="in">)</span></span>
+<span id="cb4-26"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </section>
 
-<section id="parameterized-reports" class="title-slide slide level1 center">
-<h1>Parameterized Reports</h1>
-
-<img data-src="images/params.png" class="r-stretch quarto-figure-center"><p class="caption">Source: <a href="https://jadeyryan.quarto.pub/rladies-abuja-quarto-params/materials.html" class="blue">Parameterized Reporting with Quarto</a> by Jadey Ryan</p></section>
-
-<section id="section" class="title-slide slide level1 center">
-<h1></h1>
-
-</section>
-
-<section id="idk-1" class="title-slide slide level1 center">
-<h1>idk</h1>
-<div class="cell container">
-
+<section id="end" class="title-slide slide level1 center">
+<h1>end</h1>
+<div class="codewindow r" width="500px">
+<p>external_script.R</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" data-code-line-numbers="8-12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="co"># ----- Read in Libraries ----- #</span></span>
+<span id="cb5-2"><a href=""></a><span class="do">## ---- libraries</span></span>
+<span id="cb5-3"><a href=""></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb5-4"><a href=""></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb5-5"><a href=""></a><span class="do">## ---- stop</span></span>
+<span id="cb5-6"><a href=""></a></span>
+<span id="cb5-7"><a href=""></a><span class="co"># ----- Read in the File ----- #</span></span>
+<span id="cb5-8"><a href=""></a><span class="do">## ---- read-chunk</span></span>
+<span id="cb5-9"><a href=""></a>(df <span class="ot">&lt;-</span> airquality <span class="sc">%&gt;%</span></span>
+<span id="cb5-10"><a href=""></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(Month)) <span class="sc">%&gt;%</span></span>
+<span id="cb5-11"><a href=""></a>  <span class="fu">as_tibble</span>())</span>
+<span id="cb5-12"><a href=""></a><span class="do">## ---- stop</span></span>
+<span id="cb5-13"><a href=""></a></span>
+<span id="cb5-14"><a href=""></a><span class="co"># ----- Make a Plot ----- #</span></span>
+<span id="cb5-15"><a href=""></a><span class="do">## ---- make-plot</span></span>
+<span id="cb5-16"><a href=""></a>(</span>
+<span id="cb5-17"><a href=""></a>  plot <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb5-18"><a href=""></a>    <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb5-19"><a href=""></a>    <span class="fu">geom_point</span>(<span class="fu">aes</span>(Ozone,Temp)) <span class="sc">+</span></span>
+<span id="cb5-20"><a href=""></a>    <span class="fu">facet_grid</span>(<span class="sc">~</span>Month)</span>
+<span id="cb5-21"><a href=""></a>)</span>
+<span id="cb5-22"><a href=""></a><span class="do">## ---- stop</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</div>
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
@@ -677,7 +848,7 @@ timeline
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1300,
 
         height: 700,
 
@@ -825,6 +996,24 @@ timeline
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -861,7 +1050,11 @@ timeline
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

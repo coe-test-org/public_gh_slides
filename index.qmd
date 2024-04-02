@@ -3,6 +3,8 @@ revealjs-plugins:
   - codewindow
 knitr: true
 eval: false
+echo: true
+code-overflow: wrap
 embed-resources: false
 ---
 
@@ -10,7 +12,7 @@ embed-resources: false
 
 frank aragona
 
-# {style="margin: -40px;"}
+#  {style="margin: -40px;"}
 
 ```{mermaid}
 %%| eval: true
@@ -28,72 +30,228 @@ timeline
            : March - Publish first public github repo
 ```
 
-
 # Org Guidelines
 
 ```{=html}
 <iframe width="1200" height="600" src="https://nw-page.github.io/standards/" title="Manuscript" class="myframe2"></iframe>
 ```
+# Templates
 
+```{=html}
+<iframe width="1200" height="600" src="<https://robjhyndman.com/hyndsight/quarto_templates.html>" title="Manuscript" class="myframe2"></iframe>
+```
 # Data Democratization
 
-
-# 
-
-![](images/codespace.gif){.myframe2 width="500"}
-
-# 
-
-:::: columns
-::: {.column width="60%"}
-hi
+::: incremental
+-   Accessible
+-   Reproducible
+-   Easy to install
+-   No hardware requirements
 :::
 
-::: {.column width="40%"}
+# Github Codespace
+
+![](images/codespace-2.gif){.myframe}
+
+# Github Codespace
+
+::: columns
+::: {.column width="50%"}
 ::: {.codewindow .js}
 devcontainer.json
 
-```{r eval=FALSE}
+```{javascript eval=FALSE}
 {
-    // Create R container
-    "image": "ghcr.io/rocker-org/devcontainer/r-ver:4",
-    // Add renv features
-    "features": {
-      "ghcr.io/rocker-org/devcontainer-features/renv-cache:0": {},
-      "ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
-          "packages": "github::rstudio/renv"
-      },
-      // Install Quarto 
-      "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {},
-      // Install Rstudio
-      "ghcr.io/rocker-org/devcontainer-features/rstudio-server:0": {}
-    },
-    
-      // Use 'postCreateCommand' to run commands after the container is created.
-      // Install all packages from renv.lock in the repo
-      "postCreateCommand": "R -q -e 'renv::restore()'",
+  // Create R container
+  "image": "ghcr.io/rocker-org/devcontainer/r-ver:4",
 
-      // "postCreateCommand": "R --version"
-      // Launch Rstucio IDE
-      "postAttachCommand": {
-              "rstudio-start": "rserver"
-          },
-          "forwardPorts": [
-              8787
-          ],
-          "portsAttributes": {
-              "8787": {
-                  "label": "RStudio IDE"
-              }
-          }
+  // Add renv features
+  "features": {
+    "ghcr.io/rocker-org/devcontainer-features/renv-cache:0": {},
+    "ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
+        "packages": "github::rstudio/renv"
+    },
+
+    // Install Quarto 
+    "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {},
+    
+    // Install Rstudio
+    "ghcr.io/rocker-org/devcontainer-features/rstudio-server:0": {}
+  },
+  
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // Install all packages from renv.lock in the repo
+    "postCreateCommand": "R -q -e 'renv::restore()'",
+
+    // "postCreateCommand": "R --version"
+    // Launch Rstucio IDE
+    "postAttachCommand": {
+            "rstudio-start": "rserver"
+        },
+        "forwardPorts": [
+            8787
+        ],
+        "portsAttributes": {
+            "8787": {
+                "label": "RStudio IDE"
+            }
+        }
   }
+```
+:::
+:::
+
+::: {.column .myframe2 width="50%"}
+![](images/codespace2.png)
+:::
+:::
+
+# Github Codespace
+
+![](images/codespaceR-2.gif)
+
+# Sequencing 1.0 Pipeline
+
+```{=html}
+<iframe width="1200" height="600" src="<https://nw-page.github.io/sequencing_integration_pipeline1.0/>" title="Manuscript" class="myframe2"></iframe>
+```
+
+# Sequencing 1.0 Pipeline
+
+:::::{.incremental}
+
+:::: {.columns}
+::: {.fragment fragment-index=1 .codewindow .quarto .column width="33%"}
+_quarto.yml
+```{yaml}
+project:
+  type: manuscript
+
+manuscript:
+  article: index.qmd
+  code-links: [repo, devcontainer, binder]
+
+format:
+  html:
+    comments:
+      hypothesis: true
+    # repo-url: https://github.com/DOH-EPI-Coders/sequencing1.0_sanitized
+    # repo-actions: [edit, issue]   
+    citations-hover: true
+    crossrefs-hover: true
+    toc: true
+    toc-location: left
+    title-block-style: manuscript
+    format-links: [pdf, docx]
+    notebook-links: true
+  docx: default
+  jats: default
+  pdf: 
+    output-file: "diqa-sequencing-pipeline"
+    output-ext:  "pdf"
+    margin-width: 10px
+    gutter-width: 1.5rem
+    fig-pos: "H" # this makes sure that the figures output where they're supposed to in pdf 
+    toc: true
+    number-sections: true
+    number-depth: 2
+    include-in-header:
+       - "assets/styles.tex"
+  # pdf: 
+  #   output-file: "idk"
+  # agu-pdf:
+  #   output-file: "agu"
+  # jasa-pdf:
+  #   output-file: "jasa"
+
+  # (other formats)
+  # pdf: default
+
+execute:
+  freeze: true
+
+citation:
+  type: article-journal
+  issued: 2024-03-01
 ```
 
 :::
-:::
-::::
 
-# hi
+::: {.fragment fragment-index=2 .codewindow .quarto .column width="33%"}
+index.qmd
+`````md
+---
+title: Data Integration and Quality Assurance of Sequencing Metadata in Washington State
+# affiliations: 
+#   - id: doh
+#     name: Washington State Department of Health
+#     city: Tacoma
+#     state: WA
+authors:
+date: 3-4-2024
+date-modified: today
+notebook-links: true
+abstract: |
+  <abstract-here>
+keywords:
+  - Sequencing
+  - COVID19
+bibliography: cites.bib
+---
+
+# Introduction
+ Text 
+
+# Figures
+
+During the February 2021 to September 2023 period we processed a total of 172,050 sequences. These data were most commonly processed via SFT (secure file transfer) of tabular datasets (see @fig-countprop below)
+
+{{< embed notebooks/analysis.qmd#fig-countprop >}}
+`````
+
+:::
+
+
+::: {.fragment fragment-index=3 .codewindow .quarto .column width="33%"}
+notebooks/analysis.qmd
+
+`````md
+---
+title: "Pipeline Counts"
+description: Get counts and make plots/tables of sequences in WDRS and elsewhere
+author: Frank Aragona
+date: 2-27-2024
+date-modified: today
+notebook-links: true
+html-table-processing: none
+format: 
+  html: default
+---
+
+# Libraries
+
+And read in custom functions
+```{{r}}
+options(box.path = getwd())
+getwd()
+box::use(
+  DBI[dbConnect,dbGetQuery],
+  odbc[odbc],
+  lubridate[...],
+  pins[...],
+  tibble[...]
+)
+```
+
+`````
+
+:::
+
+
+::::
+:::::
+
+# end
 
 ::: {.codewindow .r width="500px"}
 external_script.R
@@ -124,20 +282,3 @@ library(magrittr)
 ## ---- stop
 ```
 :::
-
-# Parameterized Reports
-
-![Source: [Parameterized Reporting with Quarto](https://jadeyryan.quarto.pub/rladies-abuja-quarto-params/materials.html){.blue} by Jadey Ryan](images/params.png)
-
-# 
-
-# idk
-
-```{r }
-#| classes: container
-# Load Libraries
-library(dplyr)
-
-df <- airquality |>
-  filter(hi == 5 & no == "string")
-```
